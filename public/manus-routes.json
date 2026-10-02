@@ -1,0 +1,1 @@
+{"routes":[{"path":"/","title":"Workly home"},{"path":"/jobs","title":"Browse jobs"},{"path":"/jobs/:id","title":"Job details"},{"path":"/jobs/partner/:id","title":"Partner job details"},{"path":"/create-profile","title":"Create profile"},{"path":"/signin","title":"Sign in"}]}

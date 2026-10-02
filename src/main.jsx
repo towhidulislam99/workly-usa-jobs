@@ -363,13 +363,21 @@ function CpaJobCard({ job, onDetails }) {
   </article>
 }
 
-function FeaturedAdSlot({ href = featuredAdLinks[0] }) {
-  const content = <div className="featured-ad-slot"><span>Banner</span></div>
-  return <a className="featured-ad-link" href={href} target="_blank" rel="sponsored noopener noreferrer">{content}</a>
+function AdsterraAd({ placement }) {
+  const unit = placement === 'leaderboard'
+    ? { key: 'bcc76527761554b164affc2e87d91398', width: 728, height: 90 }
+    : { key: 'a021e0b4634a0214f0d4f24780845261', width: 160, height: 600 }
+  const options = JSON.stringify({ key: unit.key, format: 'iframe', height: unit.height, width: unit.width, params: {} })
+  const srcDoc = `<!doctype html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><style>html,body{margin:0;width:100%;height:100%;overflow:hidden}iframe{border:0;max-width:100%}</style></head><body><script>window.atOptions=${options};<\/script><script src="https://eatingjudgelos.com/${unit.key}/invoke.js"><\/script></body></html>`
+  return <iframe className="adsterra-ad-frame" title={`Advertisement ${unit.width} by ${unit.height}`} width={unit.width} height={unit.height} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" srcDoc={srcDoc} />
+}
+
+function FeaturedAdSlot() {
+  return <div className="featured-ad-link"><div className="featured-ad-slot"><AdsterraAd placement="leaderboard" /></div></div>
 }
 
 function TallAdSlot() {
-  return <div className="tall-ad-slot" aria-label="Adsterra 160 by 600 ad slot"><span>Adsterra</span><small>160 × 600</small></div>
+  return <div className="tall-ad-slot"><AdsterraAd placement="skyscraper" /></div>
 }
 
 function SignalArtwork() {

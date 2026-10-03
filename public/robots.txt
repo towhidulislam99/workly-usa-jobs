@@ -4,4 +4,4 @@ Disallow: /signin
 Disallow: /create-profile
 Disallow: /api/
 
-Sitemap: https://8328-imqkntv1ahfb7k61bdig1-d3466311.us1.manus.computer/sitemap.xml
+Sitemap: https://workly-usa-jobs.netlify.app/sitemap.xml

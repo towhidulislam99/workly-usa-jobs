@@ -525,8 +525,8 @@ function Footer() {
   return <footer className="site-footer"><div className="page-width footer-top"><div className="footer-brand"><Logo light /><p>Find work that fits your life—and employers you can trust.</p><div className="social-row"><button aria-label="Workly on LinkedIn">in</button><button aria-label="Workly on Instagram">ig</button><button aria-label="Workly on X">x</button></div></div><div className="footer-links"><div><strong>For job seekers</strong><button onClick={() => navigate('/jobs')}>Find jobs</button><button onClick={() => alert('Salary insights are coming soon.')}>Salary insights</button><button onClick={() => alert('Workly safety guidance is coming soon.')}>Safety guide</button></div><div><strong>For employers</strong><button onClick={() => document.getElementById('employers')?.scrollIntoView({ behavior: 'smooth' })}>Why Workly</button><button onClick={() => alert('Employer posting tools are coming soon.')}>Post a job</button><button onClick={() => alert('Contact sales is coming soon.')}>Talk to sales</button></div><div><strong>About Workly</strong><button onClick={() => alert('We’re building a clearer way to work.')}>Our story</button><button onClick={() => alert('Workly support is coming soon.')}>Help center</button><button onClick={() => alert('We’re always looking for thoughtful builders.')}>Careers</button></div></div></div><div className="page-width footer-bottom"><span>© 2026 Workly, Inc.</span><div><button>Privacy</button><button>Terms</button><button>Accessibility</button></div><span className="footer-status"><span className="live-dot"></span> Built for better work</span></div></footer>
 }
 
-const SEO_ORIGIN = 'https://8328-imqkntv1ahfb7k61bdig1-d3466311.us1.manus.computer'
-const SEO_IMAGE = `${SEO_ORIGIN}/manus-storage/workly-job-banner_111c08c1.png`
+const SEO_ORIGIN = 'https://workly-usa-jobs.netlify.app'
+const SEO_IMAGE = `${SEO_ORIGIN}/assets/banner/banner-01.png`
 const SEO_ORGANIZATION = { '@type': 'Organization', '@id': `${SEO_ORIGIN}/#organization`, name: 'Workly', url: `${SEO_ORIGIN}/`, logo: SEO_IMAGE, description: 'A clearer way to find trusted work opportunities across the United States.' }
 const SEO_WEBSITE = { '@type': 'WebSite', '@id': `${SEO_ORIGIN}/#website`, url: `${SEO_ORIGIN}/`, name: 'Workly', publisher: { '@id': `${SEO_ORIGIN}/#organization` }, inLanguage: 'en-US' }
 
@@ -577,6 +577,7 @@ function updateSeo(path) {
   upsertMeta('property', 'og:image:alt', 'Professionals finding their next USA job opportunity')
   upsertMeta('name', 'twitter:title', seo.title)
   upsertMeta('name', 'twitter:description', seo.description)
+  upsertMeta('name', 'twitter:url', canonical)
   upsertMeta('name', 'twitter:image', SEO_IMAGE)
   let canonicalLink = document.head.querySelector('link[rel="canonical"]')
   if (!canonicalLink) { canonicalLink = document.createElement('link'); canonicalLink.rel = 'canonical'; document.head.appendChild(canonicalLink) }

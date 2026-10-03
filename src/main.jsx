@@ -373,7 +373,7 @@ function AdsterraAd({ placement }) {
 }
 
 function FeaturedAdSlot() {
-  return <div className="featured-ad-link"><div className="featured-ad-slot"><AdsterraAd placement="leaderboard" /></div></div>
+  return <div className="featured-ad-link"><span className="featured-ad-disclosure">Advertisement</span><div className="featured-ad-slot"><AdsterraAd placement="leaderboard" /></div></div>
 }
 
 function TallAdSlot() {

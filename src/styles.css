@@ -31,7 +31,7 @@
 .featured-ad-slot span{font-size:11px;font-weight:800;letter-spacing:.04em;}
 .featured-ad-slot small{font-size:10px;color:#9aa9a9;}
 .featured-ad-link{grid-column:1/-1;display:block;text-decoration:none;}
-.featured-ad-link .featured-ad-slot{width:100%;}
+ .featured-ad-link .featured-ad-slot{width:min(728px,100%);}
 .featured-jobs-note{margin:22px 0 0;color:#829092;font-size:10px;text-align:center;}
 @media (max-width:950px){.cpa-jobs-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.hero-banner-section::before{background:linear-gradient(90deg,rgba(248,245,239,.96),rgba(248,245,239,.66));}}
 @media (max-width:700px){.hero-banner-section{background-position:58% center;}.hero-banner-section::before{background:rgba(248,245,239,.88);}.cpa-jobs-grid{grid-template-columns:1fr;gap:13px;}.cpa-job-card{min-height:210px;}.featured-ad-slot{min-height:90px;flex-direction:column;gap:4px;}.featured-jobs-note{line-height:1.6;}}
@@ -123,7 +123,8 @@
 .results-list .job-card-with-poster>:not(.job-card-poster){grid-column:2;}
 @media (max-width:700px){.results-list .job-card-with-poster{grid-template-columns:minmax(92px,30%) minmax(0,1fr);column-gap:12px;padding:16px;}.results-list .job-card-poster{min-height:130px;max-height:180px;}.results-list .job-card-with-poster .job-card-title{font-size:14px;}}
 .results-list{grid-template-columns:minmax(0,1fr);}
-.results-list>.featured-ad-link,.results-list .featured-ad-slot{min-width:0;width:100%;max-width:100%;}
+.results-list>.featured-ad-link{min-width:0;width:100%;max-width:100%;}
+.results-list .featured-ad-slot{min-width:0;width:min(728px,100%);max-width:100%;}
 .results-list .adsterra-ad-frame{width:100%;max-width:100%;}
 .cpa-jobs-grid,.partner-detail-layout>.partner-copy,.partner-detail-layout>.partner-ad{min-width:0;}
 .cpa-jobs-grid>*{min-width:0;}
